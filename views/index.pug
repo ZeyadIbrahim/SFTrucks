@@ -1,6 +1,41 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  h2 Converted to PUG
+  h1 Map
+  .row
+    each truck in apiData.slice(0,20)
+      .col-lg-4.col-md-6.col-sm-12
+        .card.w-100.mb-3
+          .card-block
+            h4= 'Applicant: ' + truck.Applicant
+          ul.list-group.list-group-flush
+            li.list-group-item= 'Latitude: ' + truck.Latitude
+            li.list-group-item= 'Longitude: ' + truck.Longitude
+            li.list-group-item= 'sid: ' + truck.sid
+            li.list-group-item= 'id: ' + truck.id
+            li.list-group-item= 'position: ' + truck.position
+            li.list-group-item= 'created_at: ' + truck.created_at
+            li.list-group-item= 'created_meta: ' + truck.created_meta
+            li.list-group-item= 'updated_at: ' + updated_at
+            li.list-group-item= 'updated_meta: ' + truck.updated_meta
+            li.list-group-item= 'meta: ' + truck.meta
+            li.list-group-item= 'DayOrder: ' + truck.DayOrder
+            li.list-group-item= 'DayOfWeekStr: ' + truck.DayOfWeekStr
+            li.list-group-item= 'starttime: ' + truck.starttime
+            li.list-group-item= 'endtime: ' + truck.endtime
+            li.list-group-item= 'permit: ' + truck.permit
+            li.list-group-item= 'PermitLocation: ' + truck.PermitLocation
+            li.list-group-item= 'locationdesc: ' + truck.locationdesc
+            li.list-group-item= 'optionaltext: ' + truck.optionaltext
+            li.list-group-item= 'locationid: ' + truck.locationid
+            li.list-group-item= 'scheduleid: ' + truck.scheduleid
+            li.list-group-item= 'start24: ' + truck.start24
+            li.list-group-item= 'end24: ' + truck.end24
+            li.list-group-item= 'CNN: ' + truck.CNN
+            li.list-group-item= 'Addr_Date_Create: ' + truck.Addr_Date_Create
+            li.list-group-item= 'Addr_Date_Modified: ' + truck.Addr_Date_Modified
+            li.list-group-item= 'block: ' + truck.block
+            li.list-group-item= 'lot: ' + truck.lot
+            li.list-group-item= 'ColdTruck: ' + truck.ColdTruck
+            li.list-group-item= 'X: ' + truck.X
+            li.list-group-item= 'Y: ' + truck.Y

@@ -1,9 +1,0 @@
-extends layout
-
-block content
-  h1 Map
-  if apiData.data.length
-    each mapPoint in apiData.data
-      h3= 'ID: ' + mapPoint.id
-  else
-    h3 No Map Data Found

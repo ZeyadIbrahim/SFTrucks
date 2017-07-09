@@ -10,9 +10,8 @@ html
       href='/stylesheets/style.css')
   body
     include includes/header
-    .row.header-spacer
-      .container
-
-        block content
-
-        include includes/footer
+    .container.header-spacer
+      .row
+        .col-xs-12.col-lg-12
+          block content
+          include includes/footer
